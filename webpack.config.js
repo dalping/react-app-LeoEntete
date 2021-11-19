@@ -15,7 +15,8 @@ module.exports = {
 
     // entry에 있는 파일을 읽고 module을 적용한 후 output
     module: {
-        rules: [{
+        rules: [
+            {
             test: /\.jsx?/,
             loader: 'babel-loader',
             options: {
@@ -33,6 +34,10 @@ module.exports = {
                     'react-refresh/babel'
                 ],
             },
+        },
+        {
+            test: /\.(png|jpg)$/,
+            use: ["file-loader"]
         }],
     },
 
