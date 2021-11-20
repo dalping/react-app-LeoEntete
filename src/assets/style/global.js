@@ -8,6 +8,7 @@ nav,output,ruby,section,summary,time,mark,audio,video {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
   vertical-align: baseline;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,
@@ -17,7 +18,7 @@ nav,section {
 body {
   line-height: 1;
   font-family: 'Nanum Gothic', sans-serif;
-  background: rgb(248, 249, 250);
+  background: white;
 }
 ol,
 ul {

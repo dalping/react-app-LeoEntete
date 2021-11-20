@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
+import NotFound from './components/NotFound/NotFound';
 import ShopInfo from './components/ShopInfo/ShopInfo';
 import CartPage from './components/views/CartPage/CartPage';
 import LoginPage from './components/views/LoginPage/LoginPage';
@@ -14,11 +15,12 @@ function App() {
             <div className="App">
                 <NavBar/>
                 <Routes>
-                    <Route exact path="/" element={MainPage}/>
-                    <Route path="/mypage" element={MyPage}/>
-                    <Route path="/login" element={LoginPage}/>
-                    <Route path="/register" element={RegisterPage}/>
-                    <Route path="/cart" element={CartPage}/>
+                    <Route path="/" element={<MainPage/>}/>
+                    <Route path="/mypage" element={<MyPage />}/>
+                    <Route path="/login" component={<LoginPage/>}/>
+                    <Route path="/register" element={<RegisterPage/>}/>
+                    <Route path="/cart" element={<CartPage/>}/>
+                    <Route path="/*" element={<NotFound/>}/>
                 </Routes>
                 <ShopInfo/>
             </div>
