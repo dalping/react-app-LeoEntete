@@ -15,8 +15,32 @@ export const Menu = styled.div`
     font-weight: 500;
 
     .left{
-        & > div {
+
+        display: flex;
+        align-items: center;
+
+        .menuBtn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+
+            & > input{
+                background-color: #f0f0f0;
+                border: none;
+                border-radius: 10px;
+                height: 15px;
+                padding: 10px;
+                margin: 0 10px;
+            }
         }
     }
 

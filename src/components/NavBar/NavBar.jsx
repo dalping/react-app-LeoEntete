@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import {useNavigate, Link} from 'react-router-dom';
 import * as Styled from './style';
+import {MenuOutlined, SearchOutlined} from '@ant-design/icons';
 
 function NavBar(props) {
 
@@ -17,7 +18,11 @@ function NavBar(props) {
         <Styled.Nav>
             <Styled.Menu>
                 <div className="left">
-                    <div onClick={openDrawerHandler}>menu</div>
+                    <div className="menuBtn" onClick={openDrawerHandler}><MenuOutlined style={{fontSize:'30px'}}/></div>
+                    <form className="search">
+                        <input className='search'/>
+                        <SearchOutlined style={{fontSize:'24px', cursor:'pointer'}}/>
+                    </form>
                 </div>
                 <div className="right">
                     <span>Login</span>
