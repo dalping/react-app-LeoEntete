@@ -1,15 +1,18 @@
 import React from 'react';
 import * as Styled from './style';
+import {useNavigate} from 'react-router-dom';
 
-function Goods() {
+function Goods({data}) {
+
+    const navigate = useNavigate();
 
     return (
-        <Styled.Goods>
+        <Styled.Goods onClick={()=>{navigate(`/detail/${data.id}`)}}>
             <div className="goodsImage">
-                <img src={require('./stripe.jpg').default}/>
+                <img src={data.thumb}/>
             </div>
-            <span className='name'>줄무늬 티셔츠</span>
-            <span className='price'>12,500</span>
+            <span className='name'>{data.title}</span>
+            <span className='price'>{`${data.price}`}</span>
         </Styled.Goods>
     )
 }

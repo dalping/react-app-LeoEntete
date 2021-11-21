@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import NotFound from './components/NotFound/NotFound';
 import ShopInfo from './components/ShopInfo/ShopInfo';
 import CartPage from './components/views/CartPage/CartPage';
+import DetailPage from './components/views/DetailPage/DetailPage';
 import LoginPage from './components/views/LoginPage/LoginPage';
 import MainPage from './components/views/MainPage/MainPage';
 import MyPage from './components/views/MyPage/MyPage';
@@ -16,6 +17,7 @@ function App() {
                 <NavBar/>
                 <Routes>
                     <Route path="/" element={<MainPage/>}/>
+                    <Route path="/detail/:id" element={<DetailPage/>}/>
                     <Route path="/mypage" element={<MyPage />}/>
                     <Route path="/login" component={<LoginPage/>}/>
                     <Route path="/register" element={<RegisterPage/>}/>
