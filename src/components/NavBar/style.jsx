@@ -15,7 +15,6 @@ export const Menu = styled.div`
     font-weight: 500;
 
     .left{
-
         display: flex;
         align-items: center;
 

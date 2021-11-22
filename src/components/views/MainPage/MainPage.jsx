@@ -1,22 +1,14 @@
 import React from 'react';
-import Goods from './Goods';
 import * as Styled from './style';
 import { goods } from '../../../db/data';
+import GoodsList from '../../GoodsList/GoodsList';
 
 function MainPage() {
 
-    console.log(goods);
-
     return (
         <Styled.Main>
-            <h2>BEST SELLER</h2>
-            <Styled.GoodsList>
-                {
-                    goods.map(data => (
-                        <Goods key={data.id} data={data}/>
-                    ))
-                }
-            </Styled.GoodsList>
+            <GoodsList title="BEST SELLER" goods={goods}/>
+            <GoodsList title="NEW ITEMS" goods={goods}/>
         </Styled.Main>
     )
 }

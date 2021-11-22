@@ -11,7 +11,7 @@ function Goods({data}) {
             <div className="goodsImage">
                 <img src={data.thumb}/>
             </div>
-            <span className='name'>{data.title}</span>
+            <strong className='name'>{data.title}</strong>
             <span className='price'>{`${data.price}`}</span>
         </Styled.Goods>
     )
