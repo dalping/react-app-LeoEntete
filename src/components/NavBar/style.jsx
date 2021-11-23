@@ -76,22 +76,24 @@ export const Drawer = styled.div`
     .drawerBackground{
         position: fixed;
         top:0;
-        left:${props => (props.open ? '0vw' : '-100vw')};
+        left:0;
+        visibility: ${props => props.open?'visible':'hidden'};
         background-color:${props => (props.open ? 'rgba(0, 0, 0, 0.2)' : 'rgba(0, 0, 0, 0)')};
         width: 100vw;
         height: 100%;
-        transition: background-color 0.5s;
+        transition: background-color 0.5s, visibility 0.5s;
         z-index: 10;
     }
     
     .leftDrawer{
         position: fixed;
-        top:0;
-        left:${props => (props.open ? '0vw' : '-25vw')};
+        top: 0;
+        left: ${props => props.open ? '0' : '-25vw'};
         width: 25vw;
+        visibility: ${props => props.open ? 'visible' : 'hidden'};
         height: 100vh;
         background-color: white;
-        transition: left 0.5s ease-in;
+        transition: left 0.5s linear, visibility 0.5s;
         display: flex;
         flex-direction: column;
         box-sizing: border-box;

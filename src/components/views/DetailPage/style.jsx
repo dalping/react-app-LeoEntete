@@ -125,6 +125,7 @@ export const QnA = styled.div`
     flex-direction: column;
 
     table{
+        margin: 10px 0;
         border-top: 1px solid #DFDFDF;
         border-bottom: 1px solid #DFDFDF;
 
@@ -146,6 +147,19 @@ export const QnA = styled.div`
             }
         }
     } 
+
+    .writeBtn{
+        display: flex;
+        justify-content: end;
+
+        a{
+            cursor: pointer;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+        }
+    }
 `;
 
 export const Notice = styled.div`

@@ -5,6 +5,7 @@ export const GoodsList = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px;
+
 `;
 
 export const Goods = styled.div`

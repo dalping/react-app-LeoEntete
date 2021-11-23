@@ -15,10 +15,11 @@ function DetailPage() {
     const [TabContent, setTabContent] = useState(1);
 
     const showTapItem = () => {
+
         switch(TabContent){
-            case 1:
+            case 1: //detail
                 return <Details img={goodsInfo.img}/>
-            case 2:
+            case 2: //review
                 return <Review/>
             case 3:
                 return <QnA/>
@@ -29,7 +30,6 @@ function DetailPage() {
 
     const setSelectItemHandler = (e) => {
         console.log(e.target.options.selectedIndex);
-        
     }
 
     return (
