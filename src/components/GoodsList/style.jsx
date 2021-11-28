@@ -3,12 +3,13 @@ import styled from 'styled-components';
 export const GoodsList = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    //justify-content: space-between;
     padding: 30px;
 
 `;
 
 export const Goods = styled.div`
+    flex-grow: 2;
     display: flex;
     width: 20rem;
     flex-direction: column;
